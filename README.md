@@ -11,7 +11,7 @@ FP allows you to work on the data structure as a whole rather than as piecemeal.
 
 * When defining a new function always first define the type signature. Such as the following:
 
-    double :: Picture -> Picture br /
+    double :: Picture -> Picture br / (find a way to write a new line)
     double p =  beside (Invert P) (flipV P) br /
 
     which itself is an operation on pictures, specifically relating to the chess pieces from the week 1 tutorial optional questions. Refer to Tutorial1.hs within the INF1A folder (not the GitHub one) to see some examples of functions implemented.
