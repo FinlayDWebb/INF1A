@@ -11,16 +11,16 @@ FP allows you to work on the data structure as a whole rather than as piecemeal.
 
 * When defining a new function always first define the type signature. Such as the following:
 
-    double :: Picture -> Picture
-    double p =  beside (Invert P) (flipV P)
+    double :: Picture -> Picture br /
+    double p =  beside (Invert P) (flipV P) br /
 
     which itself is an operation on pictures, specifically relating to the chess pieces from the week 1 tutorial optional questions. Refer to Tutorial1.hs within the INF1A folder (not the GitHub one) to see some examples of functions implemented.
 
 *  Note that some functions are associative so that the syntax of the input order doesn't matter. Example:
 
-    triple :: Picture -> Picture
-    triple p = beside (beside p p) p
-    triple p = beside p (beside p p)
+    triple :: Picture -> Picture br /
+    triple p = beside (beside p p) p br /
+    triple p = beside p (beside p p) br /
 
     these two bottom lines are the same.
 
