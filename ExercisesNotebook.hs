@@ -29,7 +29,7 @@ inRange x y xs = [ a | a <- xs, a >= x, a <= y ]
 countPositive :: [Int] -> Int
 countPositive xs = sum [ 1 | x <- xs, x >= 0]
 
--- Question 6, Chapter 5. Using list comprehension write a function multDigits that areutnrs the product of all the digits in the input. If no digits in the string, the function should return a 1.
+-- Question 6, Chapter 5. Using list comprehension write a function multDigits that returns the product of all the digits in the input. If no digits in the string, the function should return a 1.
 
 multDigits :: String -> Int
 multDigits str = product [ digitToInt x | x <- str, isDigit x]
