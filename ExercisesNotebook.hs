@@ -39,3 +39,22 @@ multDigits str = product [ digitToInt x | x <- str, isDigit x]
 capitalise :: String -> String
 capitalise xs = toUpper (head xs) : map toLower (tail xs)
 
+-- Chapter 10, Recursion, Date: 30/09/24
+
+-- Question 1, Chapter 10, Write a function that returns half of each even number in a list.
+
+
+halveEvensRec :: [Int] -> [Int] 
+halveEvensRec [] = []
+halveEvensRec (x:xs) 
+     | x `mod` 2 == 0 = div x 2 : halveEvensRec xs
+     | otherwise = halveEvensRec xs
+
+-- Write a function that returns all numbers in the input list that fall within the range given by the first two parameters.
+
+inRangeRec :: Int -> Int -> [Int] -> [Int] 
+inRangeRec a b [] = []
+inRangeRec a b (x:xs)
+    | a > b = []
+    | x >= a && x <= b = x : inRangeRec a b xs
+    | otherwise = inRangeRec a b xs
